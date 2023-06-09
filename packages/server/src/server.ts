@@ -177,7 +177,7 @@ export class Server extends EventEmitter {
       // request methods it will be ignored and treated as no content type
       // was set because some HTTP clients may enforce a default value for
       // this header.
-      // See https://github.com/tus/tus-node-server/pull/116
+      // See https://github.com/liknenS/tus-node-server/pull/116
       if (header_name.toLowerCase() === 'content-type' && req.method !== 'PATCH') {
         continue
       }

@@ -7,9 +7,9 @@ import rimraf from 'rimraf'
 import request from 'supertest'
 import {Storage} from '@google-cloud/storage'
 
-import {Server, TUS_RESUMABLE, MemoryConfigstore} from '@tus/server'
-import {FileStore} from '@tus/file-store'
-import {GCSStore} from '@tus/gcs-store'
+import {Server, TUS_RESUMABLE, MemoryConfigstore} from '@liknens/tus-server'
+import {FileStore} from '@liknens/tus-file-store'
+import {GCSStore} from '@liknens/tus-gcs-store'
 
 import type http from 'node:http'
 

@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@tus/server",
+  "name": "@liknens/tus-server",
   "version": "1.0.0-beta.5",
   "description": "Tus resumable upload protocol in Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/tus/tus-node-server#readme",
-  "bugs": "https://github.com/tus/tus-node-server/issues",
+  "homepage": "https://github.com/liknenS/tus-node-server#readme",
+  "bugs": "https://github.com/liknenS/tus-node-server/issues",
   "repository": "tus/tus-node-server",
   "license": "MIT",
   "files": [

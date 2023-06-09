@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@tus/gcs-store",
+  "name": "@liknens/tus-gcs-store",
   "version": "1.0.0-beta.2",
-  "description": "Google Cloud Storage for @tus/server",
+  "description": "Google Cloud Storage for @liknens/tus-server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/tus/tus-node-server#readme",
-  "bugs": "https://github.com/tus/tus-node-server/issues",
+  "homepage": "https://github.com/liknenS/tus-node-server#readme",
+  "bugs": "https://github.com/liknenS/tus-node-server/issues",
   "repository": "tus/tus-node-server",
   "license": "MIT",
   "files": [
@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@google-cloud/storage": "^6.9.3",
-    "@tus/server": "workspace:^",
+    "@liknens/tus-server": "workspace:^",
     "@types/debug": "^4.1.7",
     "@types/mocha": "^10.0.1",
     "@types/node": "latest",
@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "@google-cloud/storage": "*",
-    "@tus/server": "workspace:^"
+    "@liknens/tus-server": "workspace:^"
   },
   "engines": {
     "node": ">=16"

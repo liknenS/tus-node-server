@@ -136,6 +136,92 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@liknens/tus-file-store@workspace:^, @liknens/tus-file-store@workspace:packages/file-store":
+  version: 0.0.0-use.local
+  resolution: "@liknens/tus-file-store@workspace:packages/file-store"
+  dependencies:
+    "@liknens/tus-server": "workspace:^"
+    "@types/configstore": ^6.0.0
+    "@types/debug": ^4.1.7
+    "@types/mocha": ^10.0.1
+    "@types/node": latest
+    configstore: ^5.0.1
+    debug: ^4.3.3
+    eslint: ^8.29.0
+    eslint-config-custom: "workspace:*"
+    mocha: ^10.1.0
+    should: ^13.2.3
+    typescript: latest
+  peerDependencies:
+    "@liknens/tus-server": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@liknens/tus-gcs-store@workspace:^, @liknens/tus-gcs-store@workspace:packages/gcs-store":
+  version: 0.0.0-use.local
+  resolution: "@liknens/tus-gcs-store@workspace:packages/gcs-store"
+  dependencies:
+    "@google-cloud/storage": ^6.9.3
+    "@liknens/tus-server": "workspace:^"
+    "@types/debug": ^4.1.7
+    "@types/mocha": ^10.0.1
+    "@types/node": latest
+    debug: ^4.3.3
+    eslint: ^8.29.0
+    eslint-config-custom: "workspace:*"
+    mocha: ^10.1.0
+    should: ^13.2.3
+    typescript: latest
+  peerDependencies:
+    "@google-cloud/storage": "*"
+    "@liknens/tus-server": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@liknens/tus-s3-store@workspace:^, @liknens/tus-s3-store@workspace:packages/s3-store":
+  version: 0.0.0-use.local
+  resolution: "@liknens/tus-s3-store@workspace:packages/s3-store"
+  dependencies:
+    "@liknens/tus-server": "workspace:^"
+    "@types/debug": ^4.1.7
+    "@types/mocha": ^10.0.1
+    "@types/node": latest
+    aws-sdk: ^2.1368.0
+    debug: ^4.3.3
+    eslint: ^8.29.0
+    eslint-config-custom: "workspace:*"
+    mocha: ^10.1.0
+    should: ^13.2.3
+    typescript: latest
+  peerDependencies:
+    "@liknens/tus-server": "workspace:^"
+  languageName: unknown
+  linkType: soft
+
+"@liknens/tus-server@workspace:^, @liknens/tus-server@workspace:packages/server":
+  version: 0.0.0-use.local
+  resolution: "@liknens/tus-server@workspace:packages/server"
+  dependencies:
+    "@types/debug": ^4.1.7
+    "@types/mocha": ^10.0.1
+    "@types/node": latest
+    "@types/sinon": ^10.0.13
+    "@types/supertest": ^2.0.12
+    debug: ^4.3.3
+    eslint: ^8.29.0
+    eslint-config-custom: "workspace:*"
+    mocha: ^10.1.0
+    node-mocks-http: ^1.12.1
+    should: ^13.2.3
+    sinon: ^15.0.4
+    supertest: ^6.3.2
+    ts-node: ^10.9.1
+    tsconfig: "*"
+    type-fest: ^3.1.0
+    typescript: latest
+  languageName: unknown
+  linkType: soft
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -262,92 +348,6 @@ __metadata:
   checksum: 3a8b657dd047495b7ad23437d6afd20297ce90380ff0bdee93fc7d39a900dbd8d9e26e53ff6b465e7967ce2adf0b218782590ce9013285121e6a5928fbd6819f
   languageName: node
   linkType: hard
-
-"@tus/file-store@workspace:^, @tus/file-store@workspace:packages/file-store":
-  version: 0.0.0-use.local
-  resolution: "@tus/file-store@workspace:packages/file-store"
-  dependencies:
-    "@tus/server": "workspace:^"
-    "@types/configstore": ^6.0.0
-    "@types/debug": ^4.1.7
-    "@types/mocha": ^10.0.1
-    "@types/node": latest
-    configstore: ^5.0.1
-    debug: ^4.3.3
-    eslint: ^8.29.0
-    eslint-config-custom: "workspace:*"
-    mocha: ^10.1.0
-    should: ^13.2.3
-    typescript: latest
-  peerDependencies:
-    "@tus/server": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@tus/gcs-store@workspace:^, @tus/gcs-store@workspace:packages/gcs-store":
-  version: 0.0.0-use.local
-  resolution: "@tus/gcs-store@workspace:packages/gcs-store"
-  dependencies:
-    "@google-cloud/storage": ^6.9.3
-    "@tus/server": "workspace:^"
-    "@types/debug": ^4.1.7
-    "@types/mocha": ^10.0.1
-    "@types/node": latest
-    debug: ^4.3.3
-    eslint: ^8.29.0
-    eslint-config-custom: "workspace:*"
-    mocha: ^10.1.0
-    should: ^13.2.3
-    typescript: latest
-  peerDependencies:
-    "@google-cloud/storage": "*"
-    "@tus/server": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@tus/s3-store@workspace:^, @tus/s3-store@workspace:packages/s3-store":
-  version: 0.0.0-use.local
-  resolution: "@tus/s3-store@workspace:packages/s3-store"
-  dependencies:
-    "@tus/server": "workspace:^"
-    "@types/debug": ^4.1.7
-    "@types/mocha": ^10.0.1
-    "@types/node": latest
-    aws-sdk: ^2.1368.0
-    debug: ^4.3.3
-    eslint: ^8.29.0
-    eslint-config-custom: "workspace:*"
-    mocha: ^10.1.0
-    should: ^13.2.3
-    typescript: latest
-  peerDependencies:
-    "@tus/server": "workspace:^"
-  languageName: unknown
-  linkType: soft
-
-"@tus/server@workspace:^, @tus/server@workspace:packages/server":
-  version: 0.0.0-use.local
-  resolution: "@tus/server@workspace:packages/server"
-  dependencies:
-    "@types/debug": ^4.1.7
-    "@types/mocha": ^10.0.1
-    "@types/node": latest
-    "@types/sinon": ^10.0.13
-    "@types/supertest": ^2.0.12
-    debug: ^4.3.3
-    eslint: ^8.29.0
-    eslint-config-custom: "workspace:*"
-    mocha: ^10.1.0
-    node-mocks-http: ^1.12.1
-    should: ^13.2.3
-    sinon: ^15.0.4
-    supertest: ^6.3.2
-    ts-node: ^10.9.1
-    tsconfig: "*"
-    type-fest: ^3.1.0
-    typescript: latest
-  languageName: unknown
-  linkType: soft
 
 "@types/configstore@npm:^6.0.0":
   version: 6.0.0
@@ -1261,10 +1261,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "demo@workspace:demo"
   dependencies:
-    "@tus/file-store": "workspace:^"
-    "@tus/gcs-store": "workspace:^"
-    "@tus/s3-store": "workspace:^"
-    "@tus/server": "workspace:^"
+    "@liknens/tus-file-store": "workspace:^"
+    "@liknens/tus-gcs-store": "workspace:^"
+    "@liknens/tus-s3-store": "workspace:^"
+    "@liknens/tus-server": "workspace:^"
     cross-env: ^7.0.3
     tus-js-client: ^2.3.0
   languageName: unknown
@@ -3675,10 +3675,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "test@workspace:test"
   dependencies:
-    "@tus/file-store": "workspace:^"
-    "@tus/gcs-store": "workspace:^"
-    "@tus/s3-store": "workspace:^"
-    "@tus/server": "workspace:^"
+    "@liknens/tus-file-store": "workspace:^"
+    "@liknens/tus-gcs-store": "workspace:^"
+    "@liknens/tus-s3-store": "workspace:^"
+    "@liknens/tus-server": "workspace:^"
     "@types/mocha": ^10.0.1
     "@types/node": latest
     "@types/rimraf": ^3

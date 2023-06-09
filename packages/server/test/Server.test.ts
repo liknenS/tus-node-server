@@ -7,7 +7,7 @@ import http from 'node:http'
 import request from 'supertest'
 
 import {Server} from '../src'
-import {FileStore} from '@tus/file-store'
+import {FileStore} from '@liknens/tus-file-store'
 import {DataStore} from '../src/models'
 import {TUS_RESUMABLE, EVENTS} from '../src/constants'
 

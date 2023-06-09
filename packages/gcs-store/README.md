@@ -1,4 +1,4 @@
-# `@tus/gcs-store`
+# `@liknens/tus-gcs-store`
 
 > 👉 **Note**: since 1.0.0 packages are split and published under the `@tus` scope.
 > The old package, `tus-node-server`, is considered unstable and will only receive security fixes.
@@ -20,14 +20,14 @@
 In Node.js (16.0+), install with npm:
 
 ```bash
-npm install @tus/gcs-store
+npm install @liknens/tus-gcs-store
 ```
 
 ## Use
 
 ```js
-const {Server} = require('@tus/server')
-const {GCSStore} = require('@tus/gcs-store')
+const {Server} = require('@liknens/tus-server')
+const {GCSStore} = require('@liknens/tus-gcs-store')
 
 const {Storage} = require('@google-cloud/storage');
 
@@ -56,9 +56,9 @@ The bucket instance
 
 ## Extensions
 
-The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@tus/gcs-store`.
+The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@liknens/tus-gcs-store`.
 
-| Extension                | `@tus/gcs-store` |
+| Extension                | `@liknens/tus-gcs-store` |
 | ------------------------ | ---------------- |
 | [Creation][]             | ✅               |
 | [Creation With Upload][] | ✅               |
@@ -77,11 +77,11 @@ This package requires Node.js 16.0+.
 
 ## Contribute
 
-See [`contributing.md`](https://github.com/tus/tus-node-server/blob/main/.github/contributing.md).
+See [`contributing.md`](https://github.com/liknenS/tus-node-server/blob/main/.github/contributing.md).
 
 ## License
 
-[MIT](https://github.com/tus/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
+[MIT](https://github.com/liknenS/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
 
 [extensions]: https://tus.io/protocols/resumable-upload.html#protocol-extensions
 [creation]: https://tus.io/protocols/resumable-upload.html#creation

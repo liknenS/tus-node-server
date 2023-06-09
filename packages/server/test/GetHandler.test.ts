@@ -10,7 +10,7 @@ import httpMocks from 'node-mocks-http'
 
 import {GetHandler} from '../src/handlers/GetHandler'
 import {DataStore} from '../src/models/DataStore'
-import {FileStore} from '@tus/file-store'
+import {FileStore} from '@liknens/tus-file-store'
 import {Upload} from '../src/models/Upload'
 
 describe('GetHandler', () => {

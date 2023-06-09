@@ -1,4 +1,4 @@
-# `@tus/server`
+# `@liknens/tus-server`
 
 > 👉 **Note**: since 1.0.0 packages are split and published under the `@tus` scope.
 > The old package, `tus-node-server`, is considered unstable and will only receive security fixes.
@@ -27,7 +27,7 @@
 In Node.js (16.0+), install with npm:
 
 ```bash
-npm install @tus/server
+npm install @liknens/tus-server
 ```
 
 ## Use
@@ -35,8 +35,8 @@ npm install @tus/server
 A standalone server which stores files on disk.
 
 ```js
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 const host = '127.0.0.1'
 const port = 1080
 
@@ -104,8 +104,8 @@ You can implement your own `GET` handlers. For instance, to return all files.
 
 ```js
 const fs = require('node:fs/promises')
-const {Server} require('@tus/server')
-const {FileStore} require('@tus/file-store')
+const {Server} require('@liknens/tus-server')
+const {FileStore} require('@liknens/tus-file-store')
 
 const server = new Server({
   path: '/files',
@@ -137,7 +137,7 @@ You can listen for events by using the `.on()` method on the `Server` instance.
 Called after an upload has been created but before it's written to a store.
 
 ```js
-const {EVENTS} = require('@tus/server')
+const {EVENTS} = require('@liknens/tus-server')
 // ...
 server.on(EVENTS.POST_CREATE, (req, res, upload => {})
 ```
@@ -147,7 +147,7 @@ server.on(EVENTS.POST_CREATE, (req, res, upload => {})
 Called every time a `PATCH` request is handled.
 
 ```js
-const {EVENTS} = require('@tus/server')
+const {EVENTS} = require('@liknens/tus-server')
 // ...
 server.on(EVENTS.POST_RECEIVE, (req, res, upload => {})
 ```
@@ -157,7 +157,7 @@ server.on(EVENTS.POST_RECEIVE, (req, res, upload => {})
 Called an upload has completed and after a response has been sent to the client.
 
 ```js
-const {EVENTS} = require('@tus/server')
+const {EVENTS} = require('@liknens/tus-server')
 // ...
 server.on(EVENTS.POST_FINISH, (req, res, upload => {})
 ```
@@ -167,7 +167,7 @@ server.on(EVENTS.POST_FINISH, (req, res, upload => {})
 Called after an upload has been terminated and a response has been sent to the client.
 
 ```js
-const {EVENTS} = require('@tus/server')
+const {EVENTS} = require('@liknens/tus-server')
 // ...
 server.on(EVENTS.POST_TERMINATE, (req, res, id => {})
 ```
@@ -177,8 +177,8 @@ server.on(EVENTS.POST_TERMINATE, (req, res, id => {})
 ### Example: integrate tus into Express
 
 ```js
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 const express = require('express')
 
 const host = '127.0.0.1'
@@ -200,8 +200,8 @@ app.listen(port, host)
 const http = require('node:http')
 const url = require('node:url')
 const Koa = require('koa')
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 
 const app = new Koa()
 const appCallback = app.callback()
@@ -229,8 +229,8 @@ server.listen(port)
 
 ```js
 const fastify = require('fastify')({ logger: true })
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 
 const tusServer = new Server({
   path: '/files',
@@ -274,8 +274,8 @@ Attach the tus server handler to a Next.js route handler in an [optional catch-a
 
 ```ts
 import type {NextApiRequest, NextApiResponse} from 'next'
-import {Server, Upload} from '@tus/server'
-import {FileStore} from '@tus/file-store'
+import {Server, Upload} from '@liknens/tus-server'
+import {FileStore} from '@liknens/tus-file-store'
 
 /**
  * !Important. This will tell Next.js NOT Parse the body as tus requires
@@ -302,7 +302,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ### Example: validate metadata when an upload is created
 
 ```js
-const {Server} = require('@tus/server')
+const {Server} = require('@liknens/tus-server')
 // ...
 
 const server = new Server({
@@ -331,16 +331,16 @@ This package requires Node.js 16.0+.
 
 ## Contribute
 
-See [`contributing.md`](https://github.com/tus/tus-node-server/blob/main/.github/contributing.md).
+See [`contributing.md`](https://github.com/liknenS/tus-node-server/blob/main/.github/contributing.md).
 
 ## License
 
-[MIT](https://github.com/tus/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
+[MIT](https://github.com/liknenS/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
 
-[`@tus/file-store`]: https://github.com/tus/tus-node-server/tree/main/packages/file-store
-[`@tus/s3-store`]: https://github.com/tus/tus-node-server/tree/main/packages/s3-store
-[`@tus/gcs-store`]: https://github.com/tus/tus-node-server/tree/main/packages/gcs-store
-[`constants`]: https://github.com/tus/tus-node-server/blob/main/packages/server/src/constants.ts
-[`types`]: https://github.com/tus/tus-node-server/blob/main/packages/server/src/types.ts
-[`models`]: https://github.com/tus/tus-node-server/blob/main/packages/server/src/models/index.ts
+[`@liknens/tus-file-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/file-store
+[`@liknens/tus-s3-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/s3-store
+[`@liknens/tus-gcs-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/gcs-store
+[`constants`]: https://github.com/liknenS/tus-node-server/blob/main/packages/server/src/constants.ts
+[`types`]: https://github.com/liknenS/tus-node-server/blob/main/packages/server/src/types.ts
+[`models`]: https://github.com/liknenS/tus-node-server/blob/main/packages/server/src/models/index.ts
 [expiration]: https://tus.io/protocols/resumable-upload.html#expiration

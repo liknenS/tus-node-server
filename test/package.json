@@ -7,10 +7,10 @@
     "test": "mocha e2e.test.ts --timeout 40000 --exit --extension ts --require ts-node/register"
   },
   "dependencies": {
-    "@tus/file-store": "workspace:^",
-    "@tus/gcs-store": "workspace:^",
-    "@tus/s3-store": "workspace:^",
-    "@tus/server": "workspace:^"
+    "@liknens/tus-file-store": "workspace:^",
+    "@liknens/tus-gcs-store": "workspace:^",
+    "@liknens/tus-s3-store": "workspace:^",
+    "@liknens/tus-server": "workspace:^"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.1",

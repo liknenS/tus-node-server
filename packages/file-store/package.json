@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@tus/file-store",
+  "name": "@liknens/tus-file-store",
   "version": "1.0.0-beta.1",
-  "description": "Local file storage for @tus/server",
+  "description": "Local file storage for @liknens/tus-server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/tus/tus-node-server#readme",
-  "bugs": "https://github.com/tus/tus-node-server/issues",
+  "homepage": "https://github.com/liknenS/tus-node-server#readme",
+  "bugs": "https://github.com/liknenS/tus-node-server/issues",
   "repository": "tus/tus-node-server",
   "files": [
     "README.md",
@@ -25,7 +25,7 @@
     "debug": "^4.3.3"
   },
   "devDependencies": {
-    "@tus/server": "workspace:^",
+    "@liknens/tus-server": "workspace:^",
     "@types/configstore": "^6.0.0",
     "@types/debug": "^4.1.7",
     "@types/mocha": "^10.0.1",
@@ -37,7 +37,7 @@
     "typescript": "latest"
   },
   "peerDependencies": {
-    "@tus/server": "workspace:^"
+    "@liknens/tus-server": "workspace:^"
   },
   "engines": {
     "node": ">=16"

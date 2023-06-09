@@ -1,4 +1,4 @@
-# `@tus/s3-store`
+# `@liknens/tus-s3-store`
 
 > 👉 **Note**: since 1.0.0 packages are split and published under the `@tus` scope.
 > The old package, `tus-node-server`, is considered unstable and will only receive security fixes.
@@ -23,14 +23,14 @@
 In Node.js (16.0+), install with npm:
 
 ```bash
-npm install @tus/s3-store
+npm install @liknens/tus-s3-store
 ```
 
 ## Use
 
 ```js
-const {Server} = require('@tus/server')
-const {S3Store} = require('@tus/s3-store')
+const {Server} = require('@liknens/tus-server')
+const {S3Store} = require('@liknens/tus-s3-store')
 
 const s3Store = new S3Store({
   partSize: 8 * 1024 * 1024, // Each uploaded part will have ~8MB,
@@ -71,9 +71,9 @@ docs for the supported options. You need to at least set the `region`, `bucket` 
 
 ## Extensions
 
-The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@tus/s3-store`.
+The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@liknens/tus-s3-store`.
 
-| Extension                | `@tus/s3-store` |
+| Extension                | `@liknens/tus-s3-store` |
 | ------------------------ | --------------- |
 | [Creation][]             | ✅              |
 | [Creation With Upload][] | ✅              |
@@ -94,8 +94,8 @@ The `credentials` config is directly passed into the AWS SDK so you can refer to
 
 ```js
 const aws = require('aws-sdk')
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/s3-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-s3-store')
 
 const s3Store = new S3Store({
   partSize: 8 * 1024 * 1024,
@@ -122,11 +122,11 @@ This package requires Node.js 16.0+.
 
 ## Contribute
 
-See [`contributing.md`](https://github.com/tus/tus-node-server/blob/main/.github/contributing.md).
+See [`contributing.md`](https://github.com/liknenS/tus-node-server/blob/main/.github/contributing.md).
 
 ## License
 
-[MIT](https://github.com/tus/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
+[MIT](https://github.com/liknenS/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
 
 [extensions]: https://tus.io/protocols/resumable-upload.html#protocol-extensions
 [creation]: https://tus.io/protocols/resumable-upload.html#creation

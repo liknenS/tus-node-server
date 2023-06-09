@@ -4,10 +4,10 @@ const path = require('path')
 const fs = require('fs')
 const assert = require('assert')
 
-const {Server, EVENTS} = require('@tus/server')
-const {GCSDataStore} = require('@tus/gcs-store')
-const {S3Store} = require('@tus/s3-store')
-const {FileStore} = require('@tus/file-store')
+const {Server, EVENTS} = require('@liknens/tus-server')
+const {GCSDataStore} = require('@liknens/tus-gcs-store')
+const {S3Store} = require('@liknens/tus-s3-store')
+const {FileStore} = require('@liknens/tus-file-store')
 
 const stores = {
   GCSDataStore: () =>

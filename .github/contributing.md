@@ -17,13 +17,13 @@ The same goes for `lint` and `format`.
 ## Tests
 
 You can run tests for individual packages by running a Yarn workspace command.
-For instance, for the `@tus/server`:
+For instance, for the `@liknens/tus-server`:
 
 ```bash
-yarn workspace @tus/server test
+yarn workspace @liknens/tus-server test
 ```
 
-Running tests for `@tus/gcs-store` requires a `keyfile.json` with credentials to be present in root.
+Running tests for `@liknens/tus-gcs-store` requires a `keyfile.json` with credentials to be present in root.
 
 `@uppy/s3-store` also requires credentials, but these should be injected.
 The easiest way to do this is creating a `.env.sh` (which is in `.gitignore`) with the following exports:
@@ -38,7 +38,7 @@ export AWS_REGION="***"
 And run it:
 
 ```bash
-source .env.sh && yarn workspace @tus/s3-store test
+source .env.sh && yarn workspace @liknens/tus-s3-store test
 ```
 
 You can run all tests with (requires both S3 and GCS credentials):

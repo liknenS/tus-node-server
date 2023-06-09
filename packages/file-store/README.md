@@ -1,4 +1,4 @@
-# `@tus/file-store`
+# `@liknens/tus-file-store`
 
 > 👉 **Note**: since 1.0.0 packages are split and published under the `@tus` scope.
 > The old package, `tus-node-server`, is considered unstable and will only receive security fixes.
@@ -23,14 +23,14 @@
 In Node.js (16.0+), install with npm:
 
 ```bash
-npm install @tus/file-store
+npm install @liknens/tus-file-store
 ```
 
 ## Use
 
 ```js
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 
 const server = new Server({
   path: '/files',
@@ -62,13 +62,13 @@ Default uses [`configstore`](https://www.npmjs.com/package/configstore).
 The time before an _ongoing_ upload is considered expired (`number`).
 
 This is since the time of creation, not modification. Once an upload is considered expired,
-uploads can be removed with [`cleanUpExpiredUploads`](https://github.com/tus/tus-node-server/tree/main/packages/server#)#servercleanupexpireduploads
+uploads can be removed with [`cleanUpExpiredUploads`](https://github.com/liknenS/tus-node-server/tree/main/packages/server#)#servercleanupexpireduploads
 
 ## Extensions
 
-The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@tus/file-store`.
+The tus protocol supports optional [extensions][]. Below is a table of the supported extensions in `@liknens/tus-file-store`.
 
-| Extension                | `@tus/file-store` |
+| Extension                | `@liknens/tus-file-store` |
 | ------------------------ | ----------------- |
 | [Creation][]             | ✅                |
 | [Creation With Upload][] | ✅                |
@@ -85,7 +85,7 @@ For demonstration purposes we will create a memory config store, but that's not 
 It's written in TypeScript.
 
 ```ts
-import type {Upload} from '@tus/server'
+import type {Upload} from '@liknens/tus-server'
 
 export class MemoryConfigstore {
   data: Map<string, Upload> = new Map()
@@ -126,11 +126,11 @@ This package requires Node.js 16.0+.
 
 ## Contribute
 
-See [`contributing.md`](https://github.com/tus/tus-node-server/blob/main/.github/contributing.md).
+See [`contributing.md`](https://github.com/liknenS/tus-node-server/blob/main/.github/contributing.md).
 
 ## License
 
-[MIT](https://github.com/tus/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
+[MIT](https://github.com/liknenS/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
 
 [extensions]: https://tus.io/protocols/resumable-upload.html#protocol-extensions
 [creation]: https://tus.io/protocols/resumable-upload.html#creation

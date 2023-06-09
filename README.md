@@ -49,8 +49,8 @@ There are also other mature servers, like [tusd](https://github.com/tus/tusd), [
 A standalone server which stores files on disk.
 
 ```js
-const {Server} = require('@tus/server')
-const {FileStore} = require('@tus/file-store')
+const {Server} = require('@liknens/tus-server')
+const {FileStore} = require('@liknens/tus-file-store')
 
 const host = '127.0.0.1'
 const port = 1080
@@ -63,13 +63,13 @@ server.listen({host, port})
 ```
 
 A tus server integrated into your existing Node.js server.
-`@tus/server` has no dependencies so it can be integrated in any server-side framework.
-More examples can be found in [`@tus/server`][].
+`@liknens/tus-server` has no dependencies so it can be integrated in any server-side framework.
+More examples can be found in [`@liknens/tus-server`][].
 
 ```js
 const fastify = require('fastify')({ logger: true });
-const {Server} = require('@tus/server');
-const {FileStore} = require('@tus/file-store');
+const {Server} = require('@liknens/tus-server');
+const {FileStore} = require('@liknens/tus-file-store');
 
 const tusServer = new Server({
   path: '/files',
@@ -95,16 +95,16 @@ fastify.listen(3000, (err) => {
 
 ## Packages
 
-- [`@tus/server`][]. The tus server. Standalone or integrate it into your Node.js server.
-- [`@tus/file-store`][]. Store files on disk.
-- [`@tus/s3-store`][]. Store files on AWS S3.
-- [`@tus/gcs-store`][]. Store files on Google Cloud Storage.
+- [`@liknens/tus-server`][]. The tus server. Standalone or integrate it into your Node.js server.
+- [`@liknens/tus-file-store`][]. Store files on disk.
+- [`@liknens/tus-s3-store`][]. Store files on AWS S3.
+- [`@liknens/tus-gcs-store`][]. Store files on Google Cloud Storage.
 
 ## Extensions
 
 The tus protocol supports optional [extensions][]. Below is a table of the supported extensions.
 
-| Extension                | [`file-store`][`@tus/file-store`] | [`s3-store`][`@tus/s3-store`] | [`gcs-store`][`@tus/gcs-store`] |
+| Extension                | [`file-store`][`@liknens/tus-file-store`] | [`s3-store`][`@liknens/tus-s3-store`] | [`gcs-store`][`@liknens/tus-gcs-store`] |
 | ------------------------ | --------------------------------- | ----------------------------- | ------------------------------- |
 | [Creation][]             | ✅                                | ✅                            | ✅                              |
 | [Creation With Upload][] | ✅                                | ✅                            | ✅                              |
@@ -146,18 +146,18 @@ All packages require Node.js 16.0+.
 
 ## Contribute
 
-See [`contributing.md`](https://github.com/tus/tus-node-server/blob/main/.github/contributing.md).
+See [`contributing.md`](https://github.com/liknenS/tus-node-server/blob/main/.github/contributing.md).
 
 ## License
 
-[MIT](https://github.com/tus/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
+[MIT](https://github.com/liknenS/tus-node-server/blob/master/license) © [tus](https://github.com/tus)
 
 [corepack]: https://nodejs.org/api/corepack.html
 [yarn]: https://yarnpkg.com/
-[`@tus/server`]: https://github.com/tus/tus-node-server/tree/main/packages/server
-[`@tus/file-store`]: https://github.com/tus/tus-node-server/tree/main/packages/file-store
-[`@tus/s3-store`]: https://github.com/tus/tus-node-server/tree/main/packages/s3-store
-[`@tus/gcs-store`]: https://github.com/tus/tus-node-server/tree/main/packages/gcs-store
+[`@liknens/tus-server`]: https://github.com/liknenS/tus-node-server/tree/main/packages/server
+[`@liknens/tus-file-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/file-store
+[`@liknens/tus-s3-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/s3-store
+[`@liknens/tus-gcs-store`]: https://github.com/liknenS/tus-node-server/tree/main/packages/gcs-store
 [extensions]: https://tus.io/protocols/resumable-upload.html#protocol-extensions
 [creation]: https://tus.io/protocols/resumable-upload.html#creation
 [creation with upload]: https://tus.io/protocols/resumable-upload.html#creation-with-upload
