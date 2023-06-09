@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@liknens/tus-gcs-store",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-leenda.1",
   "description": "Google Cloud Storage for @liknens/tus-server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
