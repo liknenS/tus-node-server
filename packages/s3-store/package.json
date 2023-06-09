@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@tus/s3-store",
-  "version": "1.0.0-beta.5",
+  "name": "@liknens/tus-s3-store",
+  "version": "1.0.0-leenda.1",
   "description": "AWS S3 store for @tus/server",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "homepage": "https://github.com/tus/tus-node-server#readme",
-  "bugs": "https://github.com/tus/tus-node-server/issues",
-  "repository": "tus/tus-node-server",
+  "homepage": "https://github.com/liknenS/tus-node-server#readme",
+  "bugs": "https://github.com/liknenS/tus-node-server/issues",
+  "repository": "liknenS/tus-node-server",
   "license": "MIT",
   "files": [
     "README.md",
